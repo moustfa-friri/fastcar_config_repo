@@ -1,0 +1,61 @@
+customprop:
+  test: 12345
+spring:
+  zipkin:
+    base-url: http://hexadb:9411/
+  cloud:
+    compatibility-verifier:
+      enabled: true
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://authorizationserver:9900
+  log:
+    level: info
+  jpa:
+    show-sql: false
+    hibernate:
+      ddl-auto: none
+    #  naming:
+    #    implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
+    #    physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+  datasource:
+    url: jdbc:mysql://hexadb:3306/hexa?serverTimezone=UTC&useSSL=false&allowPublicKeyRetrieval=true
+    username: hexa
+    password: mwdl
+    hikari: 
+      maximum-pool-size: 10
+      idle-timeout: 30000
+      max-lifetime: 1800000
+  redis:
+    data:
+      host: db
+      port: 6379
+      database: hexadb
+      repositories:
+        enabled: true
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://eurekahost:8761/eureka}
+custom:
+  security:
+    expose-unsecured-urls: true
+    unsecured-urls:
+      - /**
+management:
+  zipkin:
+    tracing:
+      endpoint: http://hexadb:9411/api/v2/spans  
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  tracing:
+    sampling:
+      probability: 1.0
