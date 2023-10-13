@@ -42,7 +42,7 @@ spring:
 eureka:
   client:
     serviceUrl:
-      defaultZone: ${EUREKA_URI:http://eurekahost:8761/eureka}
+      defaultZone: ${EUREKA_URI:http://eurekahost:8762/eureka}
 custom:
   security:
     expose-unsecured-urls: true
