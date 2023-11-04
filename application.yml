@@ -39,7 +39,7 @@ custom:
   security:
     expose-unsecured-urls: true
     unsecured-urls:
-      - /**
+      - /test**
 management:
   zipkin:
     tracing:
