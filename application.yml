@@ -10,7 +10,7 @@ spring:
     oauth2:
       resourceserver:
         jwt:
-          issuer-uri: http://localhost:9900
+          issuer-uri: http://authorizationserver:9900
   log:
     level: info
   jpa:
