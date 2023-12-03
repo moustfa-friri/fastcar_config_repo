@@ -39,7 +39,8 @@ custom:
   security:
     expose-unsecured-urls: true
     unsecured-urls:
-      - /operator/**
+      - /operator1/**
+      - /captain/signupBasicProfile
 management:
   zipkin:
     tracing:
