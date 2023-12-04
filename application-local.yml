@@ -40,7 +40,7 @@ custom:
     expose-unsecured-urls: true
     unsecured-urls:
       - /operator/
-      - /captain/signupBasicProfile/**
+      - /captain/signupBasicProfile
 management:
   zipkin:
     tracing:
