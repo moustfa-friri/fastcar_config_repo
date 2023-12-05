@@ -41,7 +41,7 @@ custom:
     unsecured-urls:
       - /cancel-reasons/**
       - /operator/
-      - /captain**
+      - /captain/**
 management:
   zipkin:
     tracing:
