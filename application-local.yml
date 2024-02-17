@@ -1,8 +1,8 @@
 customprop:
-  test: 12345
+  test: local
 spring:
   zipkin:
-    base-url: http://hexadb:9411/
+    base-url: http://stage.excellencekits.com:9411/
   cloud:
     compatibility-verifier:
       enabled: true
@@ -34,7 +34,7 @@ spring:
 eureka:
   client:
     serviceUrl:
-      defaultZone: ${EUREKA_URI:http://eurekahost:8761/eureka}
+      defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
 custom:
   security:
     expose-unsecured-urls: true
@@ -45,7 +45,7 @@ custom:
 management:
   zipkin:
     tracing:
-      endpoint: http://hexadb:9411/api/v2/spans  
+      endpoint: http://stage.excellencekits.com:9411/api/v2/spans  
   endpoints:
     web:
       exposure:
