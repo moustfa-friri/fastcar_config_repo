@@ -1,5 +1,5 @@
 customprop:
-  test: 12345
+  test: stg
 spring:
   zipkin:
     base-url: http://stage.excellencekits.com:9411/
@@ -44,7 +44,7 @@ custom:
 management:
   zipkin:
     tracing:
-      endpoint: http://stgdb:9411/api/v2/spans  
+      endpoint: http://stage.excellencekits.com:9411/api/v2/spans  
   endpoints:
     web:
       exposure:
