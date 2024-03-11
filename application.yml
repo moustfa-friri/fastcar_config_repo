@@ -2,7 +2,7 @@ customprop:
   test: stg
 spring:
   zipkin:
-    base-url: http://stage.excellencekits.com:9411/
+    base-url: http://stg-zipkin.excellencekits.com:9411/
   cloud:
     compatibility-verifier:
       enabled: true
@@ -10,31 +10,13 @@ spring:
     oauth2:
       resourceserver:
         jwt:
-          issuer-uri: http://stage.excellencekits.com:9900
+          issuer-uri: http://stg-oauth2.excellencekits.com
   log:
     level: info
-  jpa:
-    show-sql: false
-    hibernate:
-      ddl-auto: none
-    #  naming:
-    #    implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
-    #    physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
-    properties:
-      hibernate:
-        dialect: org.hibernate.dialect.MySQLDialect
-  redis:
-    data:
-      host: db
-      port: 6379
-      database: hexadb
-      repositories:
-        enabled: true
-
 eureka:
   client:
     serviceUrl:
-      defaultZone: ${EUREKA_URI:http://stageregistry.excellencekits.com:8761/eureka}
+      defaultZone: ${EUREKA_URI:http://stg-discovery.excellencekits.com:8761/eureka}
 custom:
   security:
     expose-unsecured-urls: true
@@ -44,7 +26,7 @@ custom:
 management:
   zipkin:
     tracing:
-      endpoint: http://stage.excellencekits.com:9411/api/v2/spans  
+      endpoint: http://stg-zipkin.excellencekits.com:9411/api/v2/spans  
   endpoints:
     web:
       exposure:
