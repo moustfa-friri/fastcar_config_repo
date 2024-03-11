@@ -12,7 +12,7 @@ spring:
         jwt:
           issuer-uri: http://stg-oauth2.excellencekits.com
   kafka:
-      bootstrap-servers: http://stg-kafka.excellencekits.com
+      bootstrap-servers: stg-kafka.excellencekits.com:9092
   log:
     level: info
 eureka:
