@@ -11,8 +11,7 @@ spring:
       resourceserver:
         jwt:
           issuer-uri: http://stg-oauth2.excellencekits.com
-  spring:
-    kafka:
+  kafka:
       bootstrap-servers: http://stg-kafka.excellencekits.com
   log:
     level: info
