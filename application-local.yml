@@ -10,7 +10,7 @@ spring:
     oauth2:
       resourceserver:
         jwt:
-          issuer-uri: http://localhost:9900
+          issuer-uri: stg-oauth2.excellencekits.com
   log:
     level: info
   jpa:
